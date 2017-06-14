@@ -4,6 +4,8 @@ var waterBottles = [
       'Mountain Valley Spring Water', 'Nestlé Pure Life', 'Panama Blue', 'Perrier', 'San Pellegrino', 'Sierra Springs',
       'Smart Water', 'VOSS'
       ]
+
+var waterBottleImgs = [];
 // Auto complete method
 fuzzyAutocomplete($('#bottleInput'), waterBottles);
 
@@ -16,6 +18,21 @@ function getBottles(){
       console.log('working');
       var userInput = document.getElementById('bottleInput').value;
       userBottles.push(userInput);
+      console.log(userInput);
+
+      var createImg = '';
+      createImg = document.createElement('img');
+
+      var bottleArea = document.getElementById('bottle-area');
+
+      // We're iterating through our entire waterBottles array 
+      for (var i = 0; waterBottles.length > i; i++){
+            if(userInput == waterBottles[i] || userInput !== waterBottles[i]){
+                  var newText = document.createTextNode(userInput);
+                  bottleArea.appendChild(newText);
+                  break;
+            }
+      }
 };
 
 
