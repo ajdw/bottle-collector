@@ -1,10 +1,24 @@
+body {
+	background-color: #c7dbf9;
+}
+
+.navbar {
+	background-color: #e0ecff;
+}
+
 .nav-bottle {
 	width: 2.4em;
 	margin-top: -.60em;
 }
 
 #bottle-collector-title {
-font-family: 'Bowlby One', cursive;
-letter-spacing: .4em;
-margin-left: 10px;
+	color: #eff4fc;
+	font-family: 'Bowlby One', cursive;
+	letter-spacing: .4em;
+	text-shadow: 1px 1px 2px #000000;
+	margin-left: 10px;
+}
+
+#bottleInput {
+	width: 75%;
 }
