@@ -2,3 +2,9 @@
 	width: 2.4em;
 	margin-top: -.60em;
 }
+
+#bottle-collector-title {
+font-family: 'Bowlby One', cursive;
+letter-spacing: .4em;
+margin-left: 10px;
+}
