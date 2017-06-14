@@ -1,27 +1,21 @@
   $( function() {
     var availableTags = [
-      'ActionScript',
-      'AppleScript',
-      'Asp',
-      'BASIC',
-      'C',
-      'C++',
-      'Clojure',
-      'COBOL',
-      'ColdFusion',
-      'Erlang',
-      'Fortran',
-      'Groovy',
-      'Haskell',
-      'Java',
-      'JavaScript',
-      'Lisp',
-      'Perl',
-      'PHP',
-      'Python',
-      'Ruby',
-      'Scala',
-      'Scheme'
+      'Aquafina',
+      'Arrowhead Water',
+      'Crystal Geyser',
+      'Dasani',
+      'Dejà Blue',
+      'Evian',
+      'Fiji Water',
+      'Glaceau',
+      'Mountain Valley Spring Water',
+      'Nestlé Pure Life',
+      'Panama Blue',
+      'Perrier',
+      'San Pellegrino',
+      'Sierra Springs',
+      'Smart Water',
+      'VOSS'
     ];
     $( '#tags' ).autocomplete({
       source: availableTags
