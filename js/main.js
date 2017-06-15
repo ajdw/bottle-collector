@@ -1,13 +1,13 @@
 // Our various types of water bottle brands stored in an array
 var bottles = [
-      'Aquafina','Arrowhead Water', 'Crystal Geyser', 'Dasani', 'Dejà Blue', 'Evian', 'Fiji Water', 'Glaceau',
+      'Aquafina','Arrowhead Water', 'Crystal Geyser', 'Dasani', 'Dejà Blue', 'Evian', 'Fiji', 'Glaceau',
       'Mountain Valley Spring Water', 'Nestlé Pure Life', 'Panama Blue', 'Perrier', 'San Pellegrino', 'Sierra Springs',
       'Smart Water', 'VOSS'
       ]
 
 var bottleObjectArray = [
 {
-      name: 'Fiji Water',
+      name: 'Fiji',
       image: 'img/fiji.png'
 },
 
@@ -31,7 +31,6 @@ fuzzyAutocomplete($('#bottleInput'), bottles);
 
 // Grab the users input of water bottle name
 function getBottles(){
-      console.log('working');
       var userInput = document.getElementById('bottleInput').value;
       userBottles.push(userInput);
       console.log(userInput);
@@ -47,9 +46,10 @@ function getBottles(){
                   var createImg = '';
                   var createImg = document.createElement('img');
                   createImg.setAttribute('src', bottleObjectArray[i].image);
-                  createImg.setAttribute('width', '130');
-                  createImg.setAttribute('height', '130');
-                  createImg.className = 
+                  createImg.setAttribute('width', '65');
+                  createImg.setAttribute('height', '65');
+                  createImg.setAttribute('id', 'userBottle');
+                  createImg.setAttribute('class', 'animated bounceInDown');
                   bottleArea.appendChild(createImg);
                   break;
             }
