@@ -19,6 +19,22 @@ body {
 	margin-left: 10px;
 }
 
+.userBottle {
+	border: solid 5px green;
+	height: 20px;
+	width: 20px;
+}
+
 #bottleInput {
 	width: 75%;
+}
+
+#cans-collection {
+	border: 1px solid blue;
+	height: 50px;
+}
+
+#cash-collection {
+	border: 1px solid green;
+	height: 50px;
 }

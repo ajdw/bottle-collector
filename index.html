@@ -26,27 +26,37 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-        <a class="navbar-brand" href="#"><img alt="Brand" src="img/bottle-pixelated.png" class="nav-bottle"></a>
+        <a class="navbar-brand" href="#"><img alt="Brand" src="img/coke.png" class="nav-bottle"></a>
         <a class="navbar-brand" href="#" id="bottle-collector-title">BOTTLE COLLECTOR</a>
 
     </div>
 </div>
 </nav>
 
-<!-- Need a way to propogate this area with user generated selections -->
+<!-- Need a way to propogate this area with user generated output -->
 <div id="bottle-area"></div>
+
+  <!-- Total bottles and monies collected -->
+<div class = "container-fluid">
+    <div class = "col-sm-3 col-sm-offset-3" id = "cans-collection"></div>
+    <div class = "col-sm-3" id = "cash-collection"></div>
+</div>
+<br>
+
 
 
 <div class = "container-fluid">
-<div class="col-lg-6">
-    <div class="input-group">
-      <input type="text" id="bottleInput">
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-success" onclick="getBottles()">Add Bottle</button>
-      </div><!-- /btn-group -->
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
+  <div class="col-sm-6 col-sm-offset-3">
+      <div class="input-group">
+        <input type="text" id="bottleInput">
+        <div class="input-group-btn">
+          <button type="button" class="btn btn-success" onclick="getBottles()">Add Bottle</button>
+        </div><!-- /btn-group -->
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->
+
+
 
 
 <script src="js/main.js"></script>
