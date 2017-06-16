@@ -22,6 +22,17 @@ var bottleObjectArray = [
 }
 ];
 
+// An object constructor is created so we can make more botle objects
+function Bottle(name, image) {
+  this.name = name;
+  this.image = image; 
+}
+
+// Creating bottle objects
+var aquafinaBottle = new Bottle('Aquafina','img/aquafina.png');
+var pepsiCan = new Bottle('Pepsi','img/pepsi.png');
+bottleObjectArray.push(aquafinaBottle, pepsiCan); 
+
 // User generated bottle values will go in this array
 var userBottles = [];
 
