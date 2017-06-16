@@ -37,10 +37,10 @@ function getBottles(){
 
       var bottleArea = document.getElementById('bottle-area');
 
-      // We're iterating through our entire bottles array 
+// We're iterating through our entire bottles array 
       for (var i = 0; bottleObjectArray.length > i; i++){
 
-      // Needs a regex error handling expression
+// Needs a regex error handling expression
             if (userInput.toLowerCase() == bottleObjectArray[i].name.toLowerCase()) {
                   for(var y = 0; bottleObjectArray.length > y; y++) {
                   var createImg = '';
@@ -53,6 +53,20 @@ function getBottles(){
                   bottleArea.appendChild(createImg);
                   break;
             }
+
+            var totalUserBottles = 0;
+            totalUserBottles = userBottles.length;
+            document.getElementById('bottle-number').innerHTML = totalUserBottles;
+
+
+// I am certain there's an easier way to do this...
+            var totalUserMoney = 0;
+            totalUserMoney = (userBottles.length * 0.05).toString();
+            var totalUserMoneyChar = totalUserMoney.substr(0,4);
+            if (totalUserMoneyChar.length == 3) {
+                  totalUserMoneyChar = totalUserMoneyChar + '0';
+            }
+            document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar;
 
             }
       }

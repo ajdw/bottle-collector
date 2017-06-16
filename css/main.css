@@ -19,6 +19,13 @@ body {
 	margin-left: 10px;
 }
 
+#total-bottles {
+	margin-left: 5em;
+}
+
+#total-cash {
+	margin-left: 4em;
+}
 
 #userBottle {
 	margin-top: 20px;
