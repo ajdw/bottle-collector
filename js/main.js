@@ -25,6 +25,12 @@ var bottleObjectArray = [
 // User generated bottle values will go in this array
 var userBottles = [];
 
+// Array of CSS class name animations from animate.css
+var animationArray = ['bounce', 'flash', 'pulse','rubberBand','shake','headShake','swing','tada','wobble','jello','bounceIn','bounceInDown',
+    'bounceInLeft','bounceInRight','bounceInUp','fadeIn', 'fadeInDown', 'fadeInDownBig', 'fadeInLeft', 'fadeInLeftBig', 'fadeInRight', 
+    'fadeInRightBig', 'fadeInUp', 'fadeInUpBig','flipInX','flipInY','lightSpeedIn','rotateIn','rotateInDownLeft',
+    'rotateInDownRight','rotateInUpLeft','rotateInUpRight','jackInTheBox','zoomIn','zoomInDown','zoomInLeft','zoomInRight','zoomInUp',
+    'slideInDown','slideInLeft','slideInRight','slideInUp' ];
 
 // Auto complete method
 fuzzyAutocomplete($('#bottleInput'), bottles);
@@ -49,7 +55,11 @@ function getBottles(){
                   createImg.setAttribute('width', '65');
                   createImg.setAttribute('height', '65');
                   createImg.setAttribute('id', 'userBottle');
-                  createImg.setAttribute('class', 'animated bounceInDown');
+
+                  var randomAnimation = animationArray[Math.floor(Math.random() * animationArray.length)];
+                  console.log(randomAnimation);
+
+                  createImg.setAttribute('class', 'animated ' + randomAnimation);
                   bottleArea.appendChild(createImg);
                   break;
             }
