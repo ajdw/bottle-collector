@@ -21,10 +21,22 @@ body {
 
 #total-bottles {
 	margin-left: 5em;
+	font-weight: bold;
 }
 
 #total-cash {
 	margin-left: 4em;
+	font-weight: bold;
+}
+
+#bottle-number {
+	font-weight: normal;
+	font-size: 1.2em;
+}
+
+#cash-number {
+	font-weight: normal;
+	font-size: 1.2em;
 }
 
 #userBottle {

@@ -31,7 +31,12 @@ function Bottle(name, image) {
 // Creating bottle objects
 var aquafinaBottle = new Bottle('Aquafina','img/aquafina.png');
 var pepsiCan = new Bottle('Pepsi','img/pepsi.png');
-bottleObjectArray.push(aquafinaBottle, pepsiCan); 
+var vossBottle = new Bottle('Voss','img/voss.png');
+var evianBottle = new Bottle('Evian','img/evian.png');
+var dasaniBottle = new Bottle('Dasani','img/dasani.png');
+var arrowheadBottle = new Bottle('Arrowhead','img/arrowhead.png');
+
+bottleObjectArray.push(aquafinaBottle, pepsiCan, vossBottle, evianBottle, dasaniBottle, arrowheadBottle); 
 
 // User generated bottle values will go in this array
 var userBottles = [];
