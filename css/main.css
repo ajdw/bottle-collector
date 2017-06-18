@@ -105,7 +105,6 @@ ul {
 /* media queries start here */
 @media only screen and (max-width: 500px) {
    
-
 #bottle-collector-title {
 	font-size: 22px;
 	letter-spacing: 3px;
@@ -150,5 +149,16 @@ ul {
 
 }
 
+@media only screen and (max-width: 374px) {
 
+
+#bottle-collector-title {
+	font-size: 17px;
+	letter-spacing: 3px;
+	margin-top: 10px;
+	margin-left: -22px;
+	}
+
+
+}
 
