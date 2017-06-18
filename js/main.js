@@ -1,6 +1,6 @@
 // Our various types of water bottle brands stored in an array
 var bottles = [
-      'Aquafina','Arrowhead Water', 'Crystal Geyser', 'Dasani', 'Dejà Blue', 'Evian', 'Fiji', 'Glaceau',
+      'Aquafina','Arrowhead', 'Crystal Geyser', 'Dasani', 'Dejà Blue', 'Evian', 'Fiji', 'Glaceau',
       'Mountain Valley Spring Water', 'Nestlé Pure Life', 'Panama Blue', 'Perrier', 'San Pellegrino', 'Sierra Springs',
       'Smart Water', 'VOSS'
       ]
@@ -51,27 +51,36 @@ var animationArray = ['bounce', 'flash', 'pulse','rubberBand','shake','headShake
 // Auto complete method
 fuzzyAutocomplete($('#bottleInput'), bottles);
 
-// Grab the users input of water bottle name
-function getBottles(){
-      var userInput = document.getElementById('bottleInput').value;
-      userBottles.push(userInput);
-      console.log(userInput);
 
+
+// Function that creates our bottles/cans
+function getBottles(){
+// Grab the users input of bottle/can name  
+      var userInput = document.getElementById('bottleInput').value;
+// Push the users input in our userBottles array
+      userBottles.push(userInput);
+// Print to the console the user's input 
+      console.log(userInput);
+// Grab in a variable the element in our .html file with id of 'bottle-area'
       var bottleArea = document.getElementById('bottle-area');
 
 // We're iterating through our entire bottles array 
       for (var i = 0; bottleObjectArray.length > i; i++){
 
-// Needs a regex error handling expression
+// IF user's input equals the name key value of our bottleObjectArray
             if (userInput.toLowerCase() == bottleObjectArray[i].name.toLowerCase()) {
                   for(var y = 0; bottleObjectArray.length > y; y++) {
-                  var createImg = '';
+// Create an image element in our index.html document
                   var createImg = document.createElement('img');
+// Set the attribute of that <img> to 'src' and corresponding index image
                   createImg.setAttribute('src', bottleObjectArray[i].image);
+// Set another attribute for image size values with width and height
                   createImg.setAttribute('width', '65');
                   createImg.setAttribute('height', '65');
+// Set another attribute with and id that is equal to userBottle
                   createImg.setAttribute('id', 'userBottle');
-
+                  // createImg.setAttribute('onclick', 'removeBottle()');
+                  
                   var randomAnimation = animationArray[Math.floor(Math.random() * animationArray.length)];
                   console.log(randomAnimation);
 
@@ -79,6 +88,7 @@ function getBottles(){
                   bottleArea.appendChild(createImg);
                   break;
             }
+
 
             var totalUserBottles = 0;
             totalUserBottles = userBottles.length;
@@ -99,6 +109,13 @@ function getBottles(){
 };
 
 
+
+
+   function removeBottle() {
+            var rmBottle = document.getElementById('userBottle');
+            rmBottle.parentNode.removeChild(rmBottle);
+            return false;
+            }
 
 
 
