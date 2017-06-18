@@ -19,6 +19,16 @@ body {
 	margin-left: 10px;
 }
 
+hr {
+	color: black;
+	border: 1px solid black;
+}
+
+.onHoverX {
+	width: 10px !important;
+	height: 10px !important;
+}
+
 #total-bottles {
 	margin-left: 5em;
 	font-weight: bold;
@@ -30,13 +40,23 @@ body {
 }
 
 #bottle-number {
+	margin-left: 10px;
 	font-weight: normal;
 	font-size: 1.2em;
+	color: black;
 }
 
 #cash-number {
+	margin-left: 10px;
 	font-weight: normal;
 	font-size: 1.2em;
+	color: black;
+}
+
+#bottle-area {
+	margin-left: auto;
+	margin-right: auto;
+	display: inline-block;
 }
 
 #userBottle {
@@ -45,6 +65,8 @@ body {
 
 #bottleInput {
 	width: 75%;
+	height: 38px;
+	font-size: 24px
 }
 
 .collection-area {
@@ -75,3 +97,47 @@ body {
 ul {
 	list-style-type: none;
 }
+
+/* media queries start here */
+@media only screen and (max-width: 500px) {
+   
+
+#bottle-collector-title {
+	font-size: 14px;
+	}
+
+.nav-bottle {
+	width: -2.5em;
+}
+
+#total-bottles {
+	margin-left: 0px;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+#total-cash {
+	margin-left: 0px;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+#bottle-number {
+	font-size: 1.6em;
+}
+
+#cash-number {
+	font-size: 1.6em;
+}
+
+#userBottle {
+	width: 40px;
+	height: 40px;
+	margin-left: -10px;
+}
+
+
+}
+
+
+

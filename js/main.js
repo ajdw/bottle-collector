@@ -52,17 +52,16 @@ var animationArray = ['bounce', 'flash', 'pulse','rubberBand','shake','headShake
 fuzzyAutocomplete($('#bottleInput'), bottles);
 
 
-
 // Function that creates our bottles/cans
 function getBottles(){
-// Grab the users input of bottle/can name  
-      var userInput = document.getElementById('bottleInput').value;
+// Grab the users text input of bottle/can name  
+  var userInput = document.getElementById('bottleInput').value;
 // Push the users input in our userBottles array
-      userBottles.push(userInput);
+  userBottles.push(userInput);
 // Print to the console the user's input 
-      console.log(userInput);
+  console.log(userInput);
 // Grab in a variable the element in our .html file with id of 'bottle-area'
-      var bottleArea = document.getElementById('bottle-area');
+  var bottleArea = document.getElementById('bottle-area');
 
 // We're iterating through our entire bottles array 
       for (var i = 0; bottleObjectArray.length > i; i++){
@@ -72,6 +71,8 @@ function getBottles(){
                   for(var y = 0; bottleObjectArray.length > y; y++) {
 // Create an image element in our index.html document
                   var createImg = document.createElement('img');
+
+   
 // Set the attribute of that <img> to 'src' and corresponding index image
                   createImg.setAttribute('src', bottleObjectArray[i].image);
 // Set another attribute for image size values with width and height
@@ -80,48 +81,69 @@ function getBottles(){
 // Set another attribute with and id that is equal to userBottle
                   createImg.setAttribute('id', 'userBottle');
                   // createImg.setAttribute('onclick', 'removeBottle()');
-                  
+
                   var randomAnimation = animationArray[Math.floor(Math.random() * animationArray.length)];
                   console.log(randomAnimation);
-
+// Set an attribute to our <img> element equal to class with random animation
                   createImg.setAttribute('class', 'animated ' + randomAnimation);
+// Append to the bottle area of our .html file the createImg variable
                   bottleArea.appendChild(createImg);
-                  break;
+
+                  document.getElementById('bottle-number').innerHTML = userBottles.length;
+
+
+
+      createImg.onclick = function() {
+          this.parentNode.removeChild(this);
+          userBottles.pop();
+          document.getElementById('bottle-number').innerHTML = userBottles.length;
+
+           totalUserMoney = (userBottles.length * 0.05).toString();
+           var totalUserMoneyChar = totalUserMoney.substr(0,4);
+           document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar;
+
+            // document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar;
+             if (totalUserMoneyChar.length == 3) {
+              document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar + 0;
             }
+      
+        }
 
+        if (bottleArea.childElementCount == 0) {  //using if/else statement to add items to top of list
+            bottleArea.appendChild(createImg);       // will add if count of ul children is 0 otherwise add before first item
+        }
 
-            var totalUserBottles = 0;
-            totalUserBottles = userBottles.length;
-            document.getElementById('bottle-number').innerHTML = totalUserBottles;
-
+        else {
+            bottleArea.insertBefore(createImg, bottleArea.firstChild);
+        }
+                // Break out of the getBottles() function 
+                      break;
+                }
 
 // I am certain there's an easier way to do this...
-            var totalUserMoney = 0;
             totalUserMoney = (userBottles.length * 0.05).toString();
             var totalUserMoneyChar = totalUserMoney.substr(0,4);
+
+
             if (totalUserMoneyChar.length == 3) {
                   totalUserMoneyChar = totalUserMoneyChar + '0';
             }
+         
+                else if (totalUserMoney.length == 5) {
+
+              var totalUserMoneyChar = totalUserMoney.substr(0,6);
+              document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar;
+
+            }
+
             document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar;
 
-            }
-      }
+
+            } //end of for loop
+
+      } 
+      // end of getBottles()
 };
-
-
-
-
-   function removeBottle() {
-            var rmBottle = document.getElementById('userBottle');
-            rmBottle.parentNode.removeChild(rmBottle);
-            return false;
-            }
-
-
-
-
-
-
 
 
 
