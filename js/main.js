@@ -1,26 +1,7 @@
 // Our various types of water bottle brands stored in an array
-var bottles = [
-      'Aquafina','Arrowhead', 'Crystal Geyser', 'Dasani', 'Dejà Blue', 'Evian', 'Fiji', 'Glaceau',
-      'Mountain Valley Spring Water', 'Nestlé Pure Life', 'Panama Blue', 'Perrier', 'San Pellegrino', 'Sierra Springs',
-      'Smart Water', 'VOSS'
-      ]
+var bottles = [];
 
-var bottleObjectArray = [
-{
-      name: 'Fiji',
-      image: 'img/fiji.png'
-},
-
-{
-      name: 'Coke',
-      image: 'img/coke.png'
-},
-
-{
-      name: 'Crystal Geyser',
-      image: 'img/crystalgeyser.png'
-}
-];
+var bottleObjectArray = [];
 
 // An object constructor is created so we can make more botle objects
 function Bottle(name, image) {
@@ -35,8 +16,13 @@ var vossBottle = new Bottle('Voss','img/voss.png');
 var evianBottle = new Bottle('Evian','img/evian.png');
 var dasaniBottle = new Bottle('Dasani','img/dasani.png');
 var arrowheadBottle = new Bottle('Arrowhead','img/arrowhead.png');
+var fijiBottle = new Bottle('Fiji','img/fiji.png');
+var cokeCan = new Bottle('Coke','img/coke.png');
+var crystalGeyserBottle = new Bottle('Crystal Geyser','img/crystalgeyser.png');
 
-bottleObjectArray.push(aquafinaBottle, pepsiCan, vossBottle, evianBottle, dasaniBottle, arrowheadBottle); 
+bottleObjectArray.push(aquafinaBottle, pepsiCan, vossBottle, evianBottle, dasaniBottle, arrowheadBottle, fijiBottle, cokeCan, crystalGeyserBottle); 
+bottles.push(aquafinaBottle.name, pepsiCan.name, vossBottle.name, evianBottle.name, dasaniBottle.name, arrowheadBottle.name,
+fijiBottle.name, cokeCan.name, crystalGeyserBottle.name); 
 
 // User generated bottle values will go in this array
 var userBottles = [];
@@ -65,14 +51,11 @@ function getBottles(){
 
 // We're iterating through our entire bottles array 
       for (var i = 0; bottleObjectArray.length > i; i++){
-
 // IF user's input equals the name key value of our bottleObjectArray
             if (userInput.toLowerCase() == bottleObjectArray[i].name.toLowerCase()) {
                   for(var y = 0; bottleObjectArray.length > y; y++) {
 // Create an image element in our index.html document
                   var createImg = document.createElement('img');
-
-   
 // Set the attribute of that <img> to 'src' and corresponding index image
                   createImg.setAttribute('src', bottleObjectArray[i].image);
 // Set another attribute for image size values with width and height
@@ -80,19 +63,15 @@ function getBottles(){
                   createImg.setAttribute('height', '65');
 // Set another attribute with and id that is equal to userBottle
                   createImg.setAttribute('id', 'userBottle');
-                  // createImg.setAttribute('onclick', 'removeBottle()');
-
+                  createImg.setAttribute('class', 'result');
                   var randomAnimation = animationArray[Math.floor(Math.random() * animationArray.length)];
                   console.log(randomAnimation);
 // Set an attribute to our <img> element equal to class with random animation
                   createImg.setAttribute('class', 'animated ' + randomAnimation);
 // Append to the bottle area of our .html file the createImg variable
                   bottleArea.appendChild(createImg);
-
                   document.getElementById('bottle-number').innerHTML = userBottles.length;
-
-
-
+                  
       createImg.onclick = function() {
           this.parentNode.removeChild(this);
           userBottles.pop();
@@ -140,13 +119,9 @@ function getBottles(){
 
 
             } //end of for loop
-
       } 
       // end of getBottles()
 };
-
-
-
 
 
 

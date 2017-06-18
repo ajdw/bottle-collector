@@ -24,9 +24,12 @@ hr {
 	border: 1px solid black;
 }
 
-.onHoverX {
-	width: 10px !important;
-	height: 10px !important;
+.result_hover {
+	width: 10px;
+	height: 10px;
+	background-color: purple;
+	border: 1px solid yellow;
+	box-shadow: 2px 2px 4px #888888;
 }
 
 #total-bottles {
@@ -57,6 +60,7 @@ hr {
 	margin-left: auto;
 	margin-right: auto;
 	display: inline-block;
+	margin-left: -14px;
 }
 
 #userBottle {
@@ -103,7 +107,10 @@ ul {
    
 
 #bottle-collector-title {
-	font-size: 14px;
+	font-size: 22px;
+	letter-spacing: 3px;
+	margin-top: 10px;
+	margin-left: -22px;
 	}
 
 .nav-bottle {
@@ -114,20 +121,24 @@ ul {
 	margin-left: 0px;
 	font-weight: bold;
 	font-size: 13px;
+	margin-top: -15px;
 }
 
 #total-cash {
 	margin-left: 0px;
 	font-weight: bold;
 	font-size: 13px;
+	margin-top: -15px;
 }
 
 #bottle-number {
 	font-size: 1.6em;
+	margin-top: -15px;
 }
 
 #cash-number {
 	font-size: 1.6em;
+	margin-top: -15px;
 }
 
 #userBottle {
