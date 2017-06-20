@@ -111,6 +111,7 @@ function getBottles(){
   }
 );
 
+
 // I am certain there's an easier way to do this...
             totalUserMoney = (userBottles.length * 0.05).toString();
             var totalUserMoneyChar = totalUserMoney.substr(0,4);
