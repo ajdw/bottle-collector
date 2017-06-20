@@ -19,10 +19,14 @@ var arrowheadBottle = new Bottle('Arrowhead','img/arrowhead.png');
 var fijiBottle = new Bottle('Fiji','img/fiji.png');
 var cokeCan = new Bottle('Coke','img/coke.png');
 var crystalGeyserBottle = new Bottle('Crystal Geyser','img/crystalgeyser.png');
+var mountainDewCan = new Bottle('Mountain Dew','img/mountaindew.png');
+var fantaCan = new Bottle('Fanta','img/fanta.png');
+var drPepperCan = new Bottle('Dr. Pepper','img/drpepper.png');
 
-bottleObjectArray.push(aquafinaBottle, pepsiCan, vossBottle, evianBottle, dasaniBottle, arrowheadBottle, fijiBottle, cokeCan, crystalGeyserBottle); 
+bottleObjectArray.push(aquafinaBottle, pepsiCan, vossBottle, evianBottle, dasaniBottle, arrowheadBottle, fijiBottle, cokeCan, 
+  crystalGeyserBottle, mountainDewCan, fantaCan, drPepperCan); 
 bottles.push(aquafinaBottle.name, pepsiCan.name, vossBottle.name, evianBottle.name, dasaniBottle.name, arrowheadBottle.name,
-fijiBottle.name, cokeCan.name, crystalGeyserBottle.name); 
+fijiBottle.name, cokeCan.name, crystalGeyserBottle.name, mountainDewCan.name, fantaCan.name, drPepperCan.name); 
 
 // User generated bottle values will go in this array
 var userBottles = [];
@@ -63,7 +67,6 @@ function getBottles(){
                   createImg.setAttribute('height', '65');
 // Set another attribute with and id that is equal to userBottle
                   createImg.setAttribute('id', 'userBottle');
-                  createImg.setAttribute('class', 'result');
                   var randomAnimation = animationArray[Math.floor(Math.random() * animationArray.length)];
                   console.log(randomAnimation);
 // Set an attribute to our <img> element equal to class with random animation
@@ -71,7 +74,7 @@ function getBottles(){
 // Append to the bottle area of our .html file the createImg variable
                   bottleArea.appendChild(createImg);
                   document.getElementById('bottle-number').innerHTML = userBottles.length;
-                  
+
       createImg.onclick = function() {
           this.parentNode.removeChild(this);
           userBottles.pop();
@@ -98,6 +101,15 @@ function getBottles(){
                 // Break out of the getBottles() function 
                       break;
                 }
+
+                $("#userBottle").hover(
+  function () {
+    $(this).addClass("result_hover");
+  },
+  function () {
+    $(this).removeClass("result_hover");
+  }
+);
 
 // I am certain there's an easier way to do this...
             totalUserMoney = (userBottles.length * 0.05).toString();
