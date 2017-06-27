@@ -24,12 +24,14 @@ var fantaCan = new Bottle('Fanta','img/fanta.png');
 var drPepperCan = new Bottle('Dr. Pepper','img/drpepper.png');
 var smartwaterBottle = new Bottle('Smart Water','img/smartwater.png');
 var qureBottle = new Bottle('Qure', 'img/qure.png');
+var budweiserBottle = new Bottle('Budweiser', 'img/budweiser.png');
 
 bottleObjectArray.push(aquafinaBottle, pepsiCan, vossBottle, evianBottle, dasaniBottle, arrowheadBottle, fijiBottle, cokeCan, 
-  crystalGeyserBottle, mountainDewCan, fantaCan, qureBottle, drPepperCan, smartwaterBottle); 
+  crystalGeyserBottle, mountainDewCan, fantaCan, qureBottle, drPepperCan, smartwaterBottle, budweiserBottle); 
 
 bottles.push(aquafinaBottle.name, pepsiCan.name, vossBottle.name, evianBottle.name, dasaniBottle.name, arrowheadBottle.name,
-fijiBottle.name, cokeCan.name, crystalGeyserBottle.name, qureBottle.name, smartwaterBottle.name, mountainDewCan.name, fantaCan.name, drPepperCan.name); 
+fijiBottle.name, cokeCan.name, crystalGeyserBottle.name, qureBottle.name, smartwaterBottle.name, mountainDewCan.name, fantaCan.name, drPepperCan.name,
+budweiserBottle.name); 
 
 // User generated bottle values will go in this array
 var userBottles = [];
