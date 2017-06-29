@@ -26,15 +26,17 @@ var smartwaterBottle = new Bottle('Smart Water','img/smartwater.png');
 var qureBottle = new Bottle('Qure', 'img/qure.png');
 var budweiserBottle = new Bottle('Budweiser', 'img/budweiser.png');
 var heinekenBottle = new Bottle('Heineken', 'img/heineken.png');
+var lacroixCan = new Bottle('Lacroix', 'img/lacroix.png');
+var schweppesCan = new Bottle('Schweppes', 'img/schweppes.png');
 
 // Pushing our bottles to our bottleObjectArray
 bottleObjectArray.push(aquafinaBottle, pepsiCan, vossBottle, evianBottle, dasaniBottle, arrowheadBottle, fijiBottle, cokeCan, 
-  crystalGeyserBottle, mountainDewCan, fantaCan, qureBottle, drPepperCan, smartwaterBottle, budweiserBottle, heinekenBottle); 
+  crystalGeyserBottle, mountainDewCan, fantaCan, qureBottle, drPepperCan, smartwaterBottle, budweiserBottle, heinekenBottle, schweppesCan, lacroixCan); 
 
 // Push our bottle object names to our bottles array so that way in can be autofilled when typing in our index field 
 bottles.push(aquafinaBottle.name, pepsiCan.name, vossBottle.name, evianBottle.name, dasaniBottle.name, arrowheadBottle.name,
 fijiBottle.name, cokeCan.name, crystalGeyserBottle.name, qureBottle.name, smartwaterBottle.name, mountainDewCan.name, fantaCan.name, drPepperCan.name,
-budweiserBottle.name, heinekenBottle.name); 
+budweiserBottle.name, heinekenBottle.name, schweppesCan.name, lacroixCan.name); 
 
 // User generated bottle values will go in this array
 var userBottles = [];
