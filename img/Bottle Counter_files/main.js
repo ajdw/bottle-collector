@@ -23,23 +23,12 @@ var mountainDewCan = new Bottle('Mountain Dew','img/mountaindew.png');
 var fantaCan = new Bottle('Fanta','img/fanta.png');
 var drPepperCan = new Bottle('Dr. Pepper','img/drpepper.png');
 var smartwaterBottle = new Bottle('Smart Water','img/smartwater.png');
-var qureBottle = new Bottle('Qure', 'img/qure.png');
-var budweiserBottle = new Bottle('Budweiser', 'img/budweiser.png');
-var heinekenBottle = new Bottle('Heineken', 'img/heineken.png');
-var lacroixCan = new Bottle('Lacroix', 'img/lacroix.png');
-var schweppesCan = new Bottle('Schweppes', 'img/schweppes.png');
-var sevenUpCan = new Bottle('7up', 'img/7up.png');
 
-
-// Pushing our bottles to our bottleObjectArray
 bottleObjectArray.push(aquafinaBottle, pepsiCan, vossBottle, evianBottle, dasaniBottle, arrowheadBottle, fijiBottle, cokeCan, 
-  crystalGeyserBottle, mountainDewCan, fantaCan, qureBottle, drPepperCan, smartwaterBottle, budweiserBottle, heinekenBottle, schweppesCan, lacroixCan,
-  sevenUpCan); 
+  crystalGeyserBottle, mountainDewCan, fantaCan, drPepperCan, smartwaterBottle); 
 
-// Push our bottle object names to our bottles array so that way in can be autofilled when typing in our index field 
 bottles.push(aquafinaBottle.name, pepsiCan.name, vossBottle.name, evianBottle.name, dasaniBottle.name, arrowheadBottle.name,
-fijiBottle.name, cokeCan.name, crystalGeyserBottle.name, qureBottle.name, smartwaterBottle.name, mountainDewCan.name, fantaCan.name, drPepperCan.name,
-budweiserBottle.name, heinekenBottle.name, schweppesCan.name, lacroixCan.name, sevenUpCan.name); 
+fijiBottle.name, cokeCan.name, crystalGeyserBottle.name, smartwaterBottle.name, mountainDewCan.name, fantaCan.name, drPepperCan.name); 
 
 // User generated bottle values will go in this array
 var userBottles = [];
@@ -115,13 +104,10 @@ function getBottles(){
                       break;
                 }
 
-// jQuery allows for an easy fix in which it selects the id of userBottle and once on hover we...
                 $("#userBottle").hover(
-// Add a fucntion that makes it so that this instance of the object has the added class of "result_over"
   function () {
     $(this).addClass("result_hover");
   },
-// But once we remove our curser from this object the class is removed 
   function () {
     $(this).removeClass("result_hover");
   }

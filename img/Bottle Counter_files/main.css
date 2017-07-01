@@ -1,0 +1,162 @@
+body {
+	background-color: #c7dbf9;
+}
+
+.navbar {
+	background-color: #e0ecff;
+}
+
+.nav-bottle {
+	width: 2.4em;
+	margin-top: -.60em;
+}
+
+#bottle-collector-title {
+	color: #eff4fc;
+	font-family: 'Bowlby One', cursive;
+	letter-spacing: .4em;
+	text-shadow: 1px 1px 2px #000000;
+	margin-left: 10px;
+}
+
+hr {
+	color: black;
+	border: 1px solid black;
+}
+
+#total-bottles {
+	margin-left: 5em;
+	font-weight: bold;
+}
+
+#total-cash {
+	margin-left: 4em;
+	font-weight: bold;
+}
+
+#bottle-number {
+	margin-left: 10px;
+	font-weight: normal;
+	font-size: 1.2em;
+	color: black;
+}
+
+#cash-number {
+	margin-left: 10px;
+	font-weight: normal;
+	font-size: 1.2em;
+	color: black;
+}
+
+#bottle-area {
+	margin-left: auto;
+	margin-right: auto;
+	display: inline-block;
+	margin-left: -14px;
+}
+
+#userBottle {
+	margin-top: 20px;
+}
+
+
+.result_hover {
+  	background: url(https://i.imgur.com/original/R/c/d/R/RcdRKCM) no-repeat;
+}
+
+
+#bottleInput {
+	width: 75%;
+	height: 38px;`
+	font-size: 24px
+}
+
+.collection-area {
+	display: none;
+}
+
+#cans-collection {
+	border: 1px solid blue;
+	height: 50px;
+	top: 50em;
+}
+
+#cash-collection {
+	border: 1px solid green;
+	height: 50px;
+	top: 50em;
+}
+
+#user-input-submission {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	bottom: 40px;
+	
+}
+
+ul {
+	list-style-type: none;
+}
+
+/* media queries start here */
+@media only screen and (max-width: 500px) {
+   
+#bottle-collector-title {
+	font-size: 22px;
+	letter-spacing: 3px;
+	margin-top: 10px;
+	margin-left: -22px;
+	}
+
+.nav-bottle {
+	width: -2.5em;
+}
+
+#total-bottles {
+	margin-left: 0px;
+	font-weight: bold;
+	font-size: 13px;
+	margin-top: -15px;
+}
+
+#total-cash {
+	margin-left: 0px;
+	font-weight: bold;
+	font-size: 13px;
+	margin-top: -15px;
+}
+
+#bottle-number {
+	font-size: 1.6em;
+	margin-top: -15px;
+}
+
+#cash-number {
+	font-size: 1.6em;
+	margin-top: -15px;
+}
+
+#userBottle {
+	width: 40px;
+	height: 40px;
+	margin-left: -10px;
+}
+
+
+}
+
+@media only screen and (max-width: 374px) {
+
+
+#bottle-collector-title {
+	font-size: 17px;
+	letter-spacing: 3px;
+	margin-top: 10px;
+	margin-left: -22px;
+	}
+
+
+}
+
