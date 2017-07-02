@@ -68,10 +68,10 @@ function getBottles(){
   var bottleArea = document.getElementById('bottle-area');
 
 // We're iterating through our entire bottles array 
-      for (var i = 0; bottleObjectArray.length > i; i++){
+    for (var i = 0; bottleObjectArray.length > i; i++){
 // IF user's input equals the name key value of our bottleObjectArray
-            if (userInput.toLowerCase() == bottleObjectArray[i].name.toLowerCase()) {
-                  for(var y = 0; bottleObjectArray.length > y; y++) {
+        if (userInput.toLowerCase() == bottleObjectArray[i].name.toLowerCase()) {
+            for(var y = 0; bottleObjectArray.length > y; y++) {
 // Create an image element in our index.html document
                   var createImg = document.createElement('img');
 // Set the attribute of that <img> to 'src' and corresponding index image
@@ -98,23 +98,26 @@ function getBottles(){
            var totalUserMoneyChar = totalUserMoney.substr(0,4);
            document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar;
 
-            // document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar;
-             if (totalUserMoneyChar.length == 3) {
-              document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar + 0;
-            }
-      
-        }
 
-        if (bottleArea.childElementCount == 0) {  //using if/else statement to add items to top of list
-            bottleArea.appendChild(createImg);       // will add if count of ul children is 0 otherwise add before first item
-        }
+// document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar;
+                        if (totalUserMoneyChar.length == 3) {
+                        document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar + 0;
+                      }
+                
+                  }
 
-        else {
-            bottleArea.insertBefore(createImg, bottleArea.firstChild);
-        }
-                // Break out of the getBottles() function 
-                      break;
-                }
+
+                  if (bottleArea.childElementCount == 0) {  //using if/else statement to add items to top of list
+                      bottleArea.appendChild(createImg);       // will add if count of ul children is 0 otherwise add before first item
+                  }
+
+                      else {
+                          bottleArea.insertBefore(createImg, bottleArea.firstChild);
+                      }
+                          // Break out of the getBottles() function 
+                                break;
+                     }
+
 
 // jQuery allows for an easy fix in which it selects the id of userBottle and once on hover we...
                 $("#userBottle").hover(
