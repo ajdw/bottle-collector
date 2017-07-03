@@ -30,17 +30,18 @@ var lacroixCan = new Bottle('Lacroix', 'img/lacroix.png');
 var schweppesCan = new Bottle('Schweppes', 'img/schweppes.png');
 var sevenUpCan = new Bottle('7up', 'img/7up.png');
 var spriteCan = new Bottle('Sprite', 'img/sprite.png');
+var zolaBottle = new Bottle('Zola', 'img/zola.png');
 
 
 // Pushing our bottles to our bottleObjectArray
 bottleObjectArray.push(aquafinaBottle, pepsiCan, vossBottle, evianBottle, dasaniBottle, arrowheadBottle, fijiBottle, cokeCan, 
   crystalGeyserBottle, mountainDewCan, fantaCan, qureBottle, drPepperCan, smartwaterBottle, budweiserBottle, heinekenBottle, schweppesCan, lacroixCan,
-  sevenUpCan, spriteCan); 
+  sevenUpCan, spriteCan, zolaBottle); 
 
 // Push our bottle object names to our bottles array so that way in can be autofilled when typing in our index field 
 bottles.push(aquafinaBottle.name, pepsiCan.name, vossBottle.name, evianBottle.name, dasaniBottle.name, arrowheadBottle.name,
 fijiBottle.name, cokeCan.name, crystalGeyserBottle.name, qureBottle.name, smartwaterBottle.name, mountainDewCan.name, fantaCan.name, drPepperCan.name,
-budweiserBottle.name, heinekenBottle.name, schweppesCan.name, lacroixCan.name, sevenUpCan.name, spriteCan.name); 
+budweiserBottle.name, heinekenBottle.name, schweppesCan.name, lacroixCan.name, sevenUpCan.name, spriteCan.name, zolaBottle.name); 
 
 // User generated bottle values will go in this array
 var userBottles = [];
@@ -50,7 +51,7 @@ var animationArray = ['bounce', 'flash', 'pulse','rubberBand','shake','headShake
     'bounceInLeft','bounceInRight','bounceInUp','fadeIn', 'fadeInDown', 'fadeInDownBig', 'fadeInLeft', 'fadeInLeftBig', 'fadeInRight', 
     'fadeInRightBig', 'fadeInUp', 'fadeInUpBig','flipInX','flipInY','lightSpeedIn','rotateIn','rotateInDownLeft',
     'rotateInDownRight','rotateInUpLeft','rotateInUpRight','jackInTheBox','zoomIn','zoomInDown','zoomInLeft','zoomInRight','zoomInUp',
-    'slideInDown','slideInLeft','slideInRight','slideInUp' ];
+    'slideInDown','slideInLeft','slideInRight','slideInUp'];
 
 // Auto complete method
 fuzzyAutocomplete($('#bottleInput'), bottles);
