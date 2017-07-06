@@ -32,18 +32,19 @@ var sevenUpCan = new Bottle('7up', 'img/7up.png');
 var spriteCan = new Bottle('Sprite', 'img/sprite.png');
 var zolaBottle = new Bottle('Zola', 'img/zola.png');
 var squirtCan = new Bottle('Squirt', 'img/squirt.png');
+var hawaiianPunchCan = new Bottle('Hawaiian Punch', 'img/hawaiianpunch.png');
 
 
 // Pushing our bottles to our bottleObjectArray
 bottleObjectArray.push(aquafinaBottle, pepsiCan, vossBottle, evianBottle, dasaniBottle, arrowheadBottle, fijiBottle, cokeCan, 
   crystalGeyserBottle, mountainDewCan, fantaCan, qureBottle, drPepperCan, smartwaterBottle, budweiserBottle, heinekenBottle, schweppesCan, lacroixCan,
-  sevenUpCan, spriteCan, zolaBottle, squirtCan); 
+  sevenUpCan, spriteCan, zolaBottle, squirtCan, hawaiianPunchCan); 
 
 // Push our bottle object names to our bottles array so that way in can be autofilled when typing in our index field 
 bottles.push(aquafinaBottle.name, pepsiCan.name, vossBottle.name, evianBottle.name, dasaniBottle.name, arrowheadBottle.name,
 fijiBottle.name, cokeCan.name, crystalGeyserBottle.name, qureBottle.name, smartwaterBottle.name, mountainDewCan.name, fantaCan.name, drPepperCan.name,
 budweiserBottle.name, heinekenBottle.name, schweppesCan.name, lacroixCan.name, sevenUpCan.name, spriteCan.name, zolaBottle.name,
-squirtCan.name); 
+squirtCan.name, hawaiianPunchCan.name); 
 
 // User generated bottle values will go in this array
 var userBottles = [];
@@ -91,7 +92,9 @@ function getBottles(){
 // Append to the bottle area of our .html file the createImg variable
                   bottleArea.appendChild(createImg);
                   document.getElementById('bottle-number').innerHTML = userBottles.length;
+                  console.log(userBottles);
 
+// Remove bottle function 
       createImg.onclick = function() {
           this.parentNode.removeChild(this);
           userBottles.pop();
@@ -150,15 +153,86 @@ function getBottles(){
               document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar;
 
             }
-
             document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar;
-
-
             } //end of for loop
       } 
       // end of getBottles()
 };
 
+
+// Initialize Firebase 
+
+
+ const config = {
+    apiKey: 'AIzaSyAcXld2abtYbPWZWjH-6SNl-vF-wyV7GRU',
+    authDomain: 'bottle-collector-120d4.firebaseapp.com',
+    databaseURL: 'https://bottle-collector-120d4.firebaseio.com',
+    projectId: 'bottle-collector-120d4',
+    storageBucket: '',
+    messagingSenderId: '1084725759300'
+  };
+  
+  firebase.initializeApp(config);
+
+
+  // Get Elements
+  const txtEmail = document.getElementById('txtEmail');
+  const txtPassword = document.getElementById('txtPassword');
+  const btnLogin = document.getElementById('btnLogin');
+  const btnSignUp = document.getElementById('btnSignUp');
+  const btnLogout = document.getElementById('btnLogout');
+
+
+  // Add login event
+  btnLogin.addEventListener('click', e => {
+    // Get email and pass
+    const email = txtEmail.value;
+    const pass = txtPassword.value;
+    const auth = firebase.auth();
+    // Sign in
+    const promise = auth.signInWithEmailAndPassword(email, pass);
+    promise.catch(e => console.log(e.message));
+  });
+
+
+  // Add signup event
+  btnSignUp.addEventListener('click', e=>{
+    // Get email and pass
+    // TODO: CHECK 4 REAL EMAILZ
+    const email = txtEmail.value;
+    const pass = txtPassword.value;
+    const auth = firebase.auth();
+
+    // Sign in
+    const promise = auth.createUserWithEmailAndPassword(email, pass);
+
+    promise.catch(e => console.log(e.message));
+
+  });
+
+  // Add a realtime addEventListener
+  firebase.auth().onAuthStateChanged(firebaseUser => {
+    if(firebaseUser){
+      console.log(firebaseUser);
+    }
+    else {
+      console.log('not logged in');
+    }
+  });
+
+
+
+  // const auth = firebase.auth();
+  // auth.signInWithEmailAndPassword(email,pass);
+  // auth.createUserWithEmailAndPassword(email,pass);
+  // auth.onAuthStateChanged(firebaseUser => {});
+
+  
+
+
+  // var database = firebase.database();
+  // var ref = database.ref(userBottles);
+  // ref.push(userBottles);
 
 
 

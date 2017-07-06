@@ -1,9 +1,9 @@
 body {
-	background-color: #c7dbf9;
+	background-color: #c7dbf9 !important;
 }
 
 .navbar {
-	background-color: #e0ecff;
+	background-color: #e0ecff !important;
 }
 
 .nav-bottle {
