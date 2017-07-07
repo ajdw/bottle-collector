@@ -33,18 +33,19 @@ var spriteCan = new Bottle('Sprite', 'img/sprite.png');
 var zolaBottle = new Bottle('Zola', 'img/zola.png');
 var squirtCan = new Bottle('Squirt', 'img/squirt.png');
 var hawaiianPunchCan = new Bottle('Hawaiian Punch', 'img/hawaiianpunch.png');
+var surgeCan = new Bottle('Surge', 'img/surge.png');
 
 
 // Pushing our bottles to our bottleObjectArray
 bottleObjectArray.push(aquafinaBottle, pepsiCan, vossBottle, evianBottle, dasaniBottle, arrowheadBottle, fijiBottle, cokeCan, 
   crystalGeyserBottle, mountainDewCan, fantaCan, qureBottle, drPepperCan, smartwaterBottle, budweiserBottle, heinekenBottle, schweppesCan, lacroixCan,
-  sevenUpCan, spriteCan, zolaBottle, squirtCan, hawaiianPunchCan); 
+  sevenUpCan, spriteCan, zolaBottle, squirtCan, hawaiianPunchCan, surgeCan); 
 
 // Push our bottle object names to our bottles array so that way in can be autofilled when typing in our index field 
 bottles.push(aquafinaBottle.name, pepsiCan.name, vossBottle.name, evianBottle.name, dasaniBottle.name, arrowheadBottle.name,
 fijiBottle.name, cokeCan.name, crystalGeyserBottle.name, qureBottle.name, smartwaterBottle.name, mountainDewCan.name, fantaCan.name, drPepperCan.name,
 budweiserBottle.name, heinekenBottle.name, schweppesCan.name, lacroixCan.name, sevenUpCan.name, spriteCan.name, zolaBottle.name,
-squirtCan.name, hawaiianPunchCan.name); 
+squirtCan.name, hawaiianPunchCan.name, surgeCan.name); 
 
 // User generated bottle values will go in this array
 var userBottles = [];
