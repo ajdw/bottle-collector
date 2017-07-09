@@ -1,4 +1,4 @@
-// Our various types of water bottle brands stored in an array
+// Our various types of bottle and can brand names are stored in an array
 var bottles = [];
 
 var bottleObjectArray = [];
