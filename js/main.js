@@ -76,24 +76,19 @@ function getBottles(){
     for (var i = 0; bottleObjectArray.length > i; i++){
 // IF user's input equals the name key value of our bottleObjectArray
         if (userInput.toLowerCase() == bottleObjectArray[i].name.toLowerCase()) {
-            for(var y = 0; bottleObjectArray.length > y; y++) {
-// Create an image element in our index.html document
-                  var createImg = document.createElement('img');
-// Set the attribute of that <img> to 'src' and corresponding index image
-                  createImg.setAttribute('src', bottleObjectArray[i].image);
-// Set another attribute for image size values with width and height
-                  createImg.setAttribute('width', '65');
-                  createImg.setAttribute('height', '65');
-// Set another attribute with and id that is equal to userBottle
-                  createImg.setAttribute('id', 'userBottle');
-                  var randomAnimation = animationArray[Math.floor(Math.random() * animationArray.length)];
-                  console.log(randomAnimation);
-// Set an attribute to our <img> element equal to class with random animation
-                  createImg.setAttribute('class', 'animated ' + randomAnimation);
-// Append to the bottle area of our .html file the createImg variable
-                  bottleArea.appendChild(createImg);
-                  document.getElementById('bottle-number').innerHTML = userBottles.length;
-                  console.log(userBottles);
+            for(var y = 0; bottleObjectArray.length > y; y++) {  
+              var createImg = document.createElement('img'); // Create an image element in our index.html document
+              createImg.setAttribute('src', bottleObjectArray[i].image); // Set the attribute of that <img> to 'src' and corresponding index image
+              createImg.setAttribute('width', '65'); // Set another attribute for image size values with width and height
+              createImg.setAttribute('height', '65');
+              createImg.setAttribute('id', 'userBottle'); // Set another attribute with and id that is equal to userBottle
+
+              var randomAnimation = animationArray[Math.floor(Math.random() * animationArray.length)];
+              console.log(randomAnimation);
+              createImg.setAttribute('class', 'animated ' + randomAnimation); // Set an attribute to our <img> element equal to class with random animation
+              bottleArea.appendChild(createImg); // Append to the bottle area of our .html file the createImg variable
+              document.getElementById('bottle-number').innerHTML = userBottles.length; // Get element with id of bottle-number and set innerHTML to the length of our userBottles array
+              console.log(userBottles); // log to the console our userBottles array
 
 // Remove bottle function 
       createImg.onclick = function() {
