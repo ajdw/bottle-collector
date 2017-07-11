@@ -85,8 +85,8 @@ function getBottles(){
 
 // We create a variable to store the random animantion selected from our animation array, times its length, at random, floored
               var randomAnimation = animationArray[Math.floor(Math.random() * animationArray.length)];
-              console.log(randomAnimation);
-              createImg.setAttribute('class', 'animated ' + randomAnimation); // Set an attribute to our <img> element equal to class with random animation
+              console.log(randomAnimation); // Log to the console our random animation
+              createImg.setAttribute('class', 'animated ' + randomAnimation); // Set the attributes of 'class' 'animated' plus our randomAnimation value to our createImg variable
               bottleArea.appendChild(createImg); // Append to the bottle area of our .html file the createImg variable
               document.getElementById('bottle-number').innerHTML = userBottles.length; // Get element with id of bottle-number and set innerHTML to the length of our userBottles array
               console.log(userBottles); // log to the console our userBottles array
