@@ -83,6 +83,7 @@ function getBottles(){
               createImg.setAttribute('height', '65');
               createImg.setAttribute('id', 'userBottle'); // Set another attribute with and id that is equal to userBottle
 
+// We create a variable to store the random animantion selected from our animation array, times its length, at random, floored
               var randomAnimation = animationArray[Math.floor(Math.random() * animationArray.length)];
               console.log(randomAnimation);
               createImg.setAttribute('class', 'animated ' + randomAnimation); // Set an attribute to our <img> element equal to class with random animation
