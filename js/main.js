@@ -104,33 +104,28 @@ function getBottles(){
 
 
 // document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar;
-                        if (totalUserMoneyChar.length == 3) {
-                        document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar + 0;
-                      }
-                
+                if (totalUserMoneyChar.length == 3) {
+                  document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar + 0;
+                    };
                   }
-
 
                   if (bottleArea.childElementCount == 0) {  //using if/else statement to add items to top of list
                       bottleArea.appendChild(createImg);       // will add if count of ul children is 0 otherwise add before first item
                   }
-
-                      else {
-                          bottleArea.insertBefore(createImg, bottleArea.firstChild);
+                    else {
+                        bottleArea.insertBefore(createImg, bottleArea.firstChild);
                       }
-                          // Break out of the getBottles() function 
-                                break;
+                          break; // Break out of the getBottles() function 
                      }
 
 
 // jQuery allows for an easy fix in which it selects the id of userBottle and once on hover we...
-                $("#userBottle").hover(
-// Add a fucntion that makes it so that this instance of the object has the added class of "result_over"
-  function () {
-    $(this).addClass("result_hover");
-  },
-// But once we remove our curser from this object the class is removed 
-  function () {
+$("#userBottle").hover(
+      function () { // Add a function that makes it so that this instance of the object has the added class of "result_over"
+        $(this).addClass("result_hover");
+        },
+
+      function () { // But once we remove our curser from this object the class is removed 
     $(this).removeClass("result_hover");
   }
 );
