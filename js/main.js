@@ -62,7 +62,7 @@ var animationArray = ['bounce', 'flash', 'pulse','rubberBand','shake','headShake
 fuzzyAutocomplete($('#bottleInput'), bottles);
 
 
-// Function that creates our bottles/cans
+// Function that creates our bottles/cans to be pushed to the userBottles array and show up on the UI
 function getBottles(){
 // Grab the users text input of bottle/can name  
   var userInput = document.getElementById('bottleInput').value;
