@@ -39,8 +39,8 @@ var coorsCan = new Bottle('Coors', 'img/coors.png');
 
 // Pushing our bottles to our bottleObjectArray
 bottleObjectArray.push(aquafinaBottle, pepsiCan, vossBottle, evianBottle, dasaniBottle, arrowheadBottle, fijiBottle, cokeCan, 
-  crystalGeyserBottle, mountainDewCan, fantaCan, qureBottle, drPepperCan, smartwaterBottle, budweiserBottle, heinekenBottle, schweppesCan, lacroixCan,
-  sevenUpCan, spriteCan, zolaBottle, squirtCan, hawaiianPunchCan, surgeCan, coorsCan); 
+crystalGeyserBottle, mountainDewCan, fantaCan, qureBottle, drPepperCan, smartwaterBottle, budweiserBottle, heinekenBottle, schweppesCan, lacroixCan,
+sevenUpCan, spriteCan, zolaBottle, squirtCan, hawaiianPunchCan, surgeCan, coorsCan); 
 
 // Push our bottle object names to our bottles array so that way in can be autofilled when typing in our index field 
 bottles.push(aquafinaBottle.name, pepsiCan.name, vossBottle.name, evianBottle.name, dasaniBottle.name, arrowheadBottle.name,
