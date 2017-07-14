@@ -130,103 +130,24 @@ $("#userBottle").hover(
   }
 );
 
-
 // I am certain there's an easier way to do this...
-            totalUserMoney = (userBottles.length * 0.05).toString();
-            var totalUserMoneyChar = totalUserMoney.substr(0,4);
+    totalUserMoney = (userBottles.length * 0.05).toString();    
+    var totalUserMoneyChar = totalUserMoney.substr(0,4);
 
+            
+      if (totalUserMoneyChar.length == 3) {
+        totalUserMoneyChar = totalUserMoneyChar + '0';
+          }
 
-            if (totalUserMoneyChar.length == 3) {
-                  totalUserMoneyChar = totalUserMoneyChar + '0';
-            }
-         
-                else if (totalUserMoney.length == 5) {
-
-              var totalUserMoneyChar = totalUserMoney.substr(0,6);
-              document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar;
-
-            }
+        else if (totalUserMoney.length == 5) {
+            var totalUserMoneyChar = totalUserMoney.substr(0,6);
+            document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar;
+              }
             document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar;
             } //end of for loop
       } 
       // end of getBottles()
 };
-
-
-// Initialize Firebase 
-
-
- const config = {
-    apiKey: 'AIzaSyAcXld2abtYbPWZWjH-6SNl-vF-wyV7GRU',
-    authDomain: 'bottle-collector-120d4.firebaseapp.com',
-    databaseURL: 'https://bottle-collector-120d4.firebaseio.com',
-    projectId: 'bottle-collector-120d4',
-    storageBucket: '',
-    messagingSenderId: '1084725759300'
-  };
-  
-  firebase.initializeApp(config);
-
-
-  // Get Elements
-  const txtEmail = document.getElementById('txtEmail');
-  const txtPassword = document.getElementById('txtPassword');
-  const btnLogin = document.getElementById('btnLogin');
-  const btnSignUp = document.getElementById('btnSignUp');
-  const btnLogout = document.getElementById('btnLogout');
-
-
-  // Add login event
-  btnLogin.addEventListener('click', e => {
-    // Get email and pass
-    const email = txtEmail.value;
-    const pass = txtPassword.value;
-    const auth = firebase.auth();
-    // Sign in
-    const promise = auth.signInWithEmailAndPassword(email, pass);
-    promise.catch(e => console.log(e.message));
-  });
-
-
-  // Add signup event
-  btnSignUp.addEventListener('click', e=>{
-    // Get email and pass
-    // TODO: CHECK 4 REAL EMAILZ
-    const email = txtEmail.value;
-    const pass = txtPassword.value;
-    const auth = firebase.auth();
-
-    // Sign in
-    const promise = auth.createUserWithEmailAndPassword(email, pass);
-
-    promise.catch(e => console.log(e.message));
-
-  });
-
-  // Add a realtime addEventListener
-  firebase.auth().onAuthStateChanged(firebaseUser => {
-    if(firebaseUser){
-      console.log(firebaseUser);
-    }
-    else {
-      console.log('not logged in');
-    }
-  });
-
-
-
-  // const auth = firebase.auth();
-  // auth.signInWithEmailAndPassword(email,pass);
-  // auth.createUserWithEmailAndPassword(email,pass);
-  // auth.onAuthStateChanged(firebaseUser => {});
-
-  
-
-
-  // var database = firebase.database();
-  // var ref = database.ref(userBottles);
-  // ref.push(userBottles);
-
 
 
 
