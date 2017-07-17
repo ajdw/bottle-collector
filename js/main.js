@@ -38,7 +38,6 @@ var coorsCan = new Bottle('Coors', 'img/coors.png');
 var fourLokoCanLemonade = new Bottle('Four Loko (lemonade)', 'img/4loko-lemonade.png');
 
 
-
 // Pushing our bottles to our bottleObjectArray
 bottleObjectArray.push(aquafinaBottle, pepsiCan, vossBottle, evianBottle, dasaniBottle, arrowheadBottle, fijiBottle, cokeCan, 
 crystalGeyserBottle, mountainDewCan, fantaCan, qureBottle, drPepperCan, smartwaterBottle, budweiserBottle, heinekenBottle, schweppesCan, lacroixCan,
