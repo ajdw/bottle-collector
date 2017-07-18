@@ -105,7 +105,6 @@ function getBottles(){
            var totalUserMoneyChar = totalUserMoney.substr(0,4);
            document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar;
 
-
 // document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar;
                 if (totalUserMoneyChar.length == 3) {
                   document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar + 0;
@@ -151,14 +150,6 @@ $("#userBottle").hover(
       } 
       // end of getBottles()
 };
-
-
-
-
-
-
-
-
 
 
 
