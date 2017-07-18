@@ -36,6 +36,7 @@ var hawaiianPunchCan = new Bottle('Hawaiian Punch', 'img/hawaiianpunch.png');
 var surgeCan = new Bottle('Surge', 'img/surge.png');
 var coorsCan = new Bottle('Coors', 'img/coors.png');
 var fourLokoCanLemonade = new Bottle('Four Loko (lemonade)', 'img/4loko-lemonade.png');
+
 // Generics
 var colaGenericCan = new Bottle('Cola (generic)', 'img/cola.png');
 
@@ -63,7 +64,6 @@ var animationArray = ['bounce', 'flash', 'pulse','rubberBand','shake','headShake
 
 // Auto complete method
 fuzzyAutocomplete($('#bottleInput'), bottles);
-
 
 // Function that creates our bottles/cans to be pushed to the userBottles array and show up on the UI
 function getBottles(){
