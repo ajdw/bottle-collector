@@ -41,7 +41,6 @@ var budLightCan = new Bottle('Bud Light', 'img/budlight.png');
 // Generics
 var colaGenericCan = new Bottle('Cola (generic)', 'img/cola.png');
 
-
 // Pushing our bottles to our bottleObjectArray
 bottleObjectArray.push(aquafinaBottle, pepsiCan, vossBottle, evianBottle, dasaniBottle, arrowheadBottle, fijiBottle, cokeCan, 
 crystalGeyserBottle, mountainDewCan, fantaCan, qureBottle, drPepperCan, smartwaterBottle, budweiserBottle, heinekenBottle, schweppesCan, lacroixCan,
