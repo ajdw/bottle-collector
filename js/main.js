@@ -126,7 +126,6 @@ function getBottles(){
                           break; // Break out of the getBottles() function 
                      }
 
-
 // jQuery allows for an easy fix in which it selects the id of userBottle and once on hover we...
 $("#userBottle").hover(
       function () { // Add a function that makes it so that this instance of the object has the added class of "result_over"
