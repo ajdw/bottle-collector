@@ -154,6 +154,3 @@ $("#userBottle").hover(
       } 
       // end of getBottles()
 };
-
-
-
