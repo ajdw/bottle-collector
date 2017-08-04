@@ -41,6 +41,7 @@ var gatoradeBottle = new Bottle('Gatorade', 'img/gatorade.png');
 var poweradeBottle = new Bottle('Powerade', 'img/powerade.png');
 var aAndWCan = new Bottle('A&W Root Beer', 'img/a&w.png');
 var sapporoCan = new Bottle('Sapporo', 'img/sapporo.png');
+var mrPibbCan = new Bottle('Mr. Pibb', 'img/mrpibb.png');
 
 // Generics
 var colaGenericCan = new Bottle('Cola (generic)', 'img/cola.png');
@@ -49,14 +50,14 @@ var colaGenericCan = new Bottle('Cola (generic)', 'img/cola.png');
 bottleObjectArray.push(aquafinaBottle, pepsiCan, vossBottle, evianBottle, dasaniBottle, arrowheadBottle, fijiBottle, cokeCan, 
 crystalGeyserBottle, mountainDewCan, fantaCan, qureBottle, drPepperCan, smartwaterBottle, budweiserBottle, heinekenBottle, schweppesCan, lacroixCan,
 sevenUpCan, spriteCan, zolaBottle, squirtCan, hawaiianPunchCan, surgeCan, coorsCan, fourLokoCanLemonade, budLightCan, colaGenericCan, 
-gatoradeBottle, poweradeBottle, aAndWCan, sapporoCan); 
+gatoradeBottle, poweradeBottle, aAndWCan, sapporoCan, mrPibbCan); 
 
 // Push our bottle object names to our bottles array so that way in can be autofilled when typing in our index field 
 bottles.push(aquafinaBottle.name, pepsiCan.name, vossBottle.name, evianBottle.name, dasaniBottle.name, arrowheadBottle.name,
 fijiBottle.name, cokeCan.name, crystalGeyserBottle.name, qureBottle.name, smartwaterBottle.name, mountainDewCan.name, fantaCan.name, drPepperCan.name,
 budweiserBottle.name, heinekenBottle.name, schweppesCan.name, lacroixCan.name, sevenUpCan.name, spriteCan.name, zolaBottle.name,
 squirtCan.name, hawaiianPunchCan.name, surgeCan.name, coorsCan.name, fourLokoCanLemonade.name, colaGenericCan.name, budLightCan.name,
-gatoradeBottle.name, poweradeBottle.name, aAndWCan.name, sapporoCan.name); 
+gatoradeBottle.name, poweradeBottle.name, aAndWCan.name, sapporoCan.name, mrPibbCan.name); 
 
 // User generated bottle values will go in this array
 var userBottles = [];
