@@ -119,7 +119,7 @@ function getBottles(){
                   document.getElementById('cash-number').innerHTML = '$' + totalUserMoneyChar + 0;
                     };
                   }
-
+ 
                   if (bottleArea.childElementCount == 0) {  //using if/else statement to add items to top of list
                       bottleArea.appendChild(createImg);       // will add if count of ul children is 0 otherwise add before first item
                   }
