@@ -62,7 +62,8 @@ squirtCan.name, hawaiianPunchCan.name, surgeCan.name, coorsCan.name, fourLokoCan
 gatoradeBottle.name, poweradeBottle.name, aAndWCan.name, sapporoCan.name, mrPibbCan.name, crystalPepsiBottle.name, waterGenericBottle.name); 
 
 // User generated bottle values will go in this array
-var userBottles = [];
+var userBottles = []; 
+
 
 // Array of CSS class name animations from animate.css
 var animationArray = ['bounce', 'flash', 'pulse','rubberBand','shake','headShake','swing','tada','wobble','jello','bounceIn','bounceInDown',
