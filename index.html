@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <!-- Fuzzy Auto Complete CDN -->
   <script src="https://rawgit.com/uohzxela/fuzzy-autocomplete/master/fuzzy-autocomplete.js"></script>
+  <!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
 </head>
 
 <body>
@@ -45,12 +47,16 @@
         <input type="text" id="bottleInput">
         <div class="input-group-btn">
           <button type="button" class="btn btn-success" onclick="getBottles()">Add Bottle</button>
+          <button type="button" class="btn btn-danger" onclick="submitBottles()">Submit</button>
         </div><!-- /btn-group -->
       </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
 </div>
 </footer>
 
+<!-- Custom JS -->
 <script src="js/main.js"></script>
+
+
 </body>
 </html>

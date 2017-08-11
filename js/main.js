@@ -79,12 +79,15 @@ fuzzyAutocomplete($('#bottleInput'), bottles);
 function getBottles(){
 // Grab the users text input of bottle/can name  
   var userInput = document.getElementById('bottleInput').value;
+  // 
+  userBottles;
 // Push the users input in our userBottles array
   userBottles.push(userInput);
 // Print to the console the user's input 
   console.log(userInput);
 // Grab in a variable the element in our .html file with id of 'bottle-area'
   var bottleArea = document.getElementById('bottle-area');
+
 
 // We're iterating through our entire bottles array 
     for (var i = 0; bottleObjectArray.length > i; i++){
@@ -158,3 +161,45 @@ $("#userBottle").hover(
       } 
       // end of getBottles()
 };
+
+
+// Firebase Configuration 
+  var config = {
+    apiKey: "AIzaSyAcXld2abtYbPWZWjH-6SNl-vF-wyV7GRU",
+    authDomain: "bottle-collector-120d4.firebaseapp.com",
+    databaseURL: "https://bottle-collector-120d4.firebaseio.com",
+    projectId: "bottle-collector-120d4",
+    storageBucket: "bottle-collector-120d4.appspot.com",
+    messagingSenderId: "1084725759300"
+  };
+
+  firebase.initializeApp(config);
+  console.log(firebase);
+
+
+// Storing Firebase's database in a variable
+var database = firebase.database();
+
+
+function submitBottles(){
+  var data = {
+    number_of_bottles: userBottles.length,
+    type_of_bottles: userBottles,
+    cash_from_bottles: totalUserMoney
+  }
+
+  console.log(data);
+  var ref = database.ref('User Bottle Collection');
+  alert('Thank you for submitting');
+  ref.push(data);
+}
+
+
+
+
+
+
+
+
+
+
