@@ -187,7 +187,7 @@ function submitBottles(){
   var data = {
     number_of_bottles: userBottles.length,
     type_of_bottles: userBottles,
-    cash_from_bottles: totalUserMoney
+    cash_from_bottles: totalUserMoney.substr(0,4)
   }
 
   console.log(data);
