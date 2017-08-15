@@ -250,10 +250,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
   if(firebaseUser){
     console.log(firebaseUser);
     document.getElementById('user-status').innerHTML = 'Welcome ' + firebaseUser.email;
-    // document.getElementById('bottle-number').innerHTML = authData.uid.number_of_bottles;
-    // document.getElementById('cash-number').innerHTML = authData.uid.cash_from_bottles;
-    // document.getElementById('bottle-area').innerHTML = authData.uid.type_of_bottes;
-    // window.location = 'loginmain.html';
+
     btnLogout.classList.remove('hide');
     
   } else {
