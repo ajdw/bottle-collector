@@ -248,7 +248,25 @@ btnLogout.addEventListener('click', e =>{
 // Add a realtime addEventListener
 firebase.auth().onAuthStateChanged(firebaseUser => {
   if(firebaseUser){
-    console.log(firebaseUser);
+    console.log('We logged in and the current firebaseUser is: ' + firebaseUser);
+    console.log('We logged in and the current firebaseUser uid is: ' + firebase.auth().currentUser.uid);
+
+
+    var currentUser = firebase.auth().currentUser.uid;
+
+    console.log('confirmed that currentUser var is equal to: ' + currentUser);
+
+    firebase.database().ref('/User Data/').orderByChild('uid').equalTo(currentUser).once('value').then(function(snapshot) {
+      var username = snapshot.val();
+      console.log('It works, we have the current user as: ' + currentUser);  
+
+        // document.getElementById('cash-number').innerHTML = '$' + cash_from_bottles;
+
+      });
+
+
+
+    // Display welcome message in the index.html page of the current user's e-mail
     document.getElementById('user-status').innerHTML = 'Welcome ' + firebaseUser.email;
 
     btnLogout.classList.remove('hide');
@@ -262,6 +280,8 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 });
 
 
+
+// Later on in your code (that runs some time after that login callback fires)
 
 
 
