@@ -48,6 +48,16 @@ hr {
 	color: black;
 }
 
+.button-zone {
+	float: right;
+}
+
+#txtEmail, #txtPassword {
+	margin-top: 5px;
+	font-size: 22px;
+	text-align: center;
+}
+
 #bottle-area {
 	margin-left: auto;
 	margin-right: auto;
@@ -73,6 +83,11 @@ hr {
 
 input[type="text"] {
     font-size: 25px;
+}
+
+#user-status {
+	margin-left: 20px;
+	font-size: 20px;
 }
 
 .addBottleBtn {

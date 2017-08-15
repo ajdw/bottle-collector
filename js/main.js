@@ -196,8 +196,73 @@ function submitBottles(){
   ref.push(data);
 }
 
+  const auth = firebase.auth();
+
+  const txtEmail = document.getElementById('txtEmail');
+  const txtPassword = document.getElementById('txtPassword');
+  const btnLogin = document.getElementById('btnLogin');
+  const btnSignUp = document.getElementById('btnSignUp');
+  const btnLogout = document.getElementById('btnLogout');
+
+  const userStatus = document.getElementById('status');
 
 
+// Add login event
+btnLogin.addEventListener('click', e=> {
+  // Get email and password 
+  const email = txtEmail.value;
+  const pass = txtPassword.value;
+  const auth = firebase.auth();
+
+  // Sign in
+  const promise = auth.signInWithEmailAndPassword(email, pass);
+  promise.catch(e => console.log(e.message));
+
+});
+
+// Add signup event
+btnSignUp.addEventListener('click', e=> {
+    // Get email and password 
+    //TO DO: Check 4 real Email with regex
+  const email = txtEmail.value;
+  const pass = txtPassword.value;
+  const auth = firebase.auth();
+
+
+// Check to see if user password is longer than 6 characters, if not, we send them a message on the index.html page
+if (pass.length <= 6) {
+  console.log('THE IF STATEMENT WORKS WORKS WORKS');
+  document.getElementById('user-status').innerHTML = 'Password must be longer than 6 characters';
+}
+
+  // Sign in
+  const promise = auth.createUserWithEmailAndPassword(email, pass);
+  promise.catch(e => console.log(e.message));
+
+});
+
+btnLogout.addEventListener('click', e =>{
+  firebase.auth().signOut();
+});
+
+// Add a realtime addEventListener
+firebase.auth().onAuthStateChanged(firebaseUser => {
+  if(firebaseUser){
+    console.log(firebaseUser);
+    document.getElementById('user-status').innerHTML = 'Welcome ' + firebaseUser.email;
+    // document.getElementById('bottle-number').innerHTML = authData.uid.number_of_bottles;
+    // document.getElementById('cash-number').innerHTML = authData.uid.cash_from_bottles;
+    // document.getElementById('bottle-area').innerHTML = authData.uid.type_of_bottes;
+    // window.location = 'loginmain.html';
+    btnLogout.classList.remove('hide');
+    
+  } else {
+    console.log('not logged in');
+    btnLogout.classList.add('hide');
+    document.getElementById('user-status').innerHTML = '';
+
+  }
+});
 
 
 
