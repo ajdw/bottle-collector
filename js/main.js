@@ -253,6 +253,8 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
 
     var currentUser = firebase.auth().currentUser.uid;
+    var ref = database.ref('cash_from_bottles');
+    console.log('CASH' + ref);
 
     console.log('confirmed that currentUser var is equal to: ' + currentUser);
 
@@ -263,8 +265,6 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
         // document.getElementById('cash-number').innerHTML = '$' + cash_from_bottles;
 
       });
-
-
 
     // Display welcome message in the index.html page of the current user's e-mail
     document.getElementById('user-status').innerHTML = 'Welcome ' + firebaseUser.email;
@@ -278,8 +278,6 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
   }
 });
-
-
 
 // Later on in your code (that runs some time after that login callback fires)
 
