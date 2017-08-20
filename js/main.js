@@ -202,9 +202,7 @@ function submitBottles(){
   const btnLogin = document.getElementById('btnLogin');
   const btnSignUp = document.getElementById('btnSignUp');
   const btnLogout = document.getElementById('btnLogout');
-
   const userStatus = document.getElementById('status');
-
 
 // Add login event
 btnLogin.addEventListener('click', e=> {
@@ -279,8 +277,5 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 });
 
 // Later on in your code (that runs some time after that login callback fires)
-
-
-
 
 
