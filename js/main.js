@@ -182,7 +182,6 @@ $("#userBottle").hover(
 // Storing Firebase's database in a variable
 var database = firebase.database();
 
-
 function submitBottles(){
   var data = {
     number_of_bottles: userBottles.length,
