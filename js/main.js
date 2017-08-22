@@ -254,7 +254,6 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
     console.log('We logged in and the current firebaseUser is: ' + firebaseUser);
     console.log('We logged in and the current firebaseUser uid is: ' + firebase.auth().currentUser.uid);
 
-
     var currentUser = firebase.auth().currentUser.uid;
     var ref = database.ref('cash_from_bottles');
     console.log('CASH' + ref);
