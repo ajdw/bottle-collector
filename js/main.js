@@ -271,6 +271,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
     // Display welcome message in the index.html page of the current user's e-mail
     document.getElementById('user-status').innerHTML = 'Welcome ' + firebaseUser.email;
 
+    // Remove the hide button class from the btnLogout variable referencing out logout button
     btnLogout.classList.remove('hide');
     
   } else {
