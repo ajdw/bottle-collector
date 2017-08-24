@@ -184,7 +184,6 @@ $("#userBottle").hover(
   firebase.initializeApp(config);
   console.log(firebase);
 
-
 // Storing Firebase's database in a variable
 var database = firebase.database();
 
