@@ -72,7 +72,6 @@ for (var i = 0; i < bottleObjectArray.length; i++) {
 // User generated bottle values will go in this array
 var userBottles = []; 
 
-
 // Array of CSS class name animations from animate.css
 var animationArray = ['bounce', 'flash', 'pulse','rubberBand','shake','headShake','swing','tada','wobble','jello','bounceIn','bounceInDown',
     'bounceInLeft','bounceInRight','bounceInUp','fadeIn', 'fadeInDown', 'fadeInDownBig', 'fadeInLeft', 'fadeInLeftBig', 'fadeInRight', 
@@ -169,7 +168,6 @@ $("#userBottle").hover(
       } 
       // end of getBottles()
 };
-
 
 // Firebase Configuration 
   var config = {
