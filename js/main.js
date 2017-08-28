@@ -228,7 +228,6 @@ btnSignUp.addEventListener('click', e=> {
   const pass = txtPassword.value;
   const auth = firebase.auth();
 
-
 // Check to see if user password is longer than 6 characters, if not, we send them a message on the index.html page
 if (pass.length <= 6) {
   console.log('THE IF STATEMENT WORKS WORKS WORKS');
@@ -275,7 +274,6 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
     console.log('not logged in');
     btnLogout.classList.add('hide');
     document.getElementById('user-status').innerHTML = '';
-
   }
 });
 
