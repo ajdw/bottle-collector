@@ -278,4 +278,3 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 });
 
 // Later on in your code (that runs some time after that login callback fires)
-
