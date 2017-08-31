@@ -253,7 +253,6 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
     var currentUser = firebase.auth().currentUser.uid;
     var ref = database.ref('cash_from_bottles');
     console.log('CASH' + ref);
-
     console.log('confirmed that currentUser var is equal to: ' + currentUser);
 
     firebase.database().ref('/User Data/').orderByChild('uid').equalTo(currentUser).once('value').then(function(snapshot) {
