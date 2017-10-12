@@ -220,6 +220,7 @@ btnLogin.addEventListener('click', e=> {
 
 });
 
+
 // Add signup event
 btnSignUp.addEventListener('click', e=> {
     // Get email and password 
@@ -234,6 +235,7 @@ if (pass.length <= 6) {
   document.getElementById('user-status').innerHTML = 'Password must be longer than 6 characters';
 }
 
+
   // Sign in
   const promise = auth.createUserWithEmailAndPassword(email, pass);
   promise.catch(e => console.log(e.message));
@@ -243,6 +245,7 @@ if (pass.length <= 6) {
 btnLogout.addEventListener('click', e =>{
   firebase.auth().signOut();
 });
+
 
 // Add a realtime addEventListener
 firebase.auth().onAuthStateChanged(firebaseUser => {
